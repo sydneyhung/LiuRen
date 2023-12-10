@@ -80,7 +80,7 @@
   display: grid;
   gap: 3px;
   grid-template-columns: repeat(4, 1fr);
-  border: solid;
+  border-style: solid;
 }
 .pillar {
   margin: 9px auto;

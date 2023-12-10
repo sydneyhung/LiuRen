@@ -156,8 +156,9 @@ class Chuan {
     this.jiang = this.zhi.map((i) => p.jiang[p.zhi.indexOf(i)]);
     this.qin = this.zhi.map((i) => Gan(k.rGan).shengKe(Zhi(i).WuXing));
     for (let i = 0; i < 3; i++) {
-      if (p.xunkong.includes(p.zhi.indexOf(this.zhi[i]))) this.kong.push(-1);
-      else if (this.gan[i] == -1) this.kong.push(-2);
+      if (this.gan[i] == -1) this.kong.push(-2);
+      else if (p.xunkong.includes(p.zhi.indexOf(this.zhi[i])))
+        this.kong.push(-1);
       else this.kong.push(0);
     }
   }

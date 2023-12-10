@@ -73,7 +73,14 @@ function update() {
       td[i].classList.remove('kong');
     }
   }
-  document.getElementById('note-box').value += `${r.chuan.method}課`;
+  const time = new Date();
+  const mm = ('0' + (time.getMonth() + 1)).slice(-2);
+  const dd = ('0' + time.getDate()).slice(-2);
+  document.getElementById('note-box').value =
+    `\n\n\n${time.getFullYear()}/${mm}/${dd}\n` +
+    `${('0' + time.getHours()).slice(-2)}:` +
+    `${('0' + time.getMinutes()).slice(-2)}\n` +
+    `${r.chuan.method}課`;
 }
 
 function init() {
@@ -106,12 +113,7 @@ function init() {
   for (let i = 0; i < 12; i++) {
     td.innerHTML += `<div id="cell-${i}" class="cell"></div>`;
   }
-  td.innerHTML +=
-    '<textarea id="note-box" maxlength="120">\n\n\n\n' +
-    `${time.getFullYear()}/${mm}/${dd}\n` +
-    `${('0' + time.getHours()).slice(-2)}:` +
-    `${('0' + time.getMinutes()).slice(-2)}\n` +
-    '</textarea>';
+  td.innerHTML += '<textarea id="note-box" maxlength="120"></textarea>';
 
   // render info
   update();
