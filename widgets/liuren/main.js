@@ -36,14 +36,17 @@ function update() {
   const ck = r.chuan.kong.map((i) => (i == -1 ? '⊙' : i == -2 ? '⌾' : '　'));
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
-      `<span class="g">${cq[i]}</span>` +
       '<span>' +
-      `<span class="q">${cg[i]}</span>` +
+      `<span class="s">　</span>` +
+      `<span class="q">${cq[i]}</span>` +
+      '</span>' +
+      '<span>' +
+      `<span class="s">${cg[i]}</span>` +
       `<span class="z">${cz[i]}</span>` +
       '</span>' +
       '<span>' +
       `<span class="j">${cj[i]}</span>` +
-      `<span class="q">${ck[i]}</span>` +
+      `<span class="s">${ck[i]}</span>` +
       '</span>';
   }
 

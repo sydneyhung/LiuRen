@@ -6,7 +6,7 @@
   font-family: 'myFont';
   font-size: 96%;
 }
-.q {
+.s {
   font-family: 'myFont';
   font-size: 60%;
   margin: auto;
@@ -25,6 +25,12 @@
 }
 .j {
   color: rgb(12, 120, 120);
+  font-family: 'myFont';
+  font-size: 99%;
+  margin: auto;
+}
+.q {
+  color: rgb(30, 30, 180);
   font-family: 'myFont';
   font-size: 96%;
   margin: auto;
