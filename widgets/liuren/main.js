@@ -33,9 +33,7 @@ function update() {
   const cg = r.chuan.gan.map((i) => (i < 0 ? '𐩒' : keys.tG[i]));
   const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
-  const ck = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(
-    r.pan.xunkong.includes(i) ? '𐩒' : '　'
-  );
+  const ck = '𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒';
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
       `<span class="g">${cq[i]}</span>` +
