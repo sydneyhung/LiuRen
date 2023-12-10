@@ -30,10 +30,10 @@ function update() {
 
   const c3 = document.getElementById('c3').children;
   const cz = r.chuan.zhi.map((i) => keys.dZ[i]);
-  const cg = r.chuan.gan.map((i) => (i < 0 ? '　' : keys.tG[i]));
+  const cg = r.chuan.gan.map((i) => (i < 0 ? '⌾' : keys.tG[i]));
   const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
-  const ck = r.chuan.kong.map((i) => (i == -1 ? '⊙' : i == -2 ? '⌾' : '　'));
+  const ck = r.chuan.kong.map((i) => (i == -1 ? '⊙' : '　'));
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
       '<span>' +
@@ -80,7 +80,7 @@ function update() {
   const mm = ('0' + (time.getMonth() + 1)).slice(-2);
   const dd = ('0' + time.getDate()).slice(-2);
   document.getElementById('note-box').value =
-    `\n\n\n${time.getFullYear()}/${mm}/${dd}\n` +
+    `\n\n${time.getFullYear()}/${mm}/${dd}\n` +
     `${('0' + time.getHours()).slice(-2)}:` +
     `${('0' + time.getMinutes()).slice(-2)}\n` +
     `${r.chuan.method}課`;
