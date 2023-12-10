@@ -144,6 +144,9 @@ class Chuan {
   /** LiuQin Array 0~2 */
   qin: Array<number>;
 
+  /** LuoXong Array 0~2 */
+  kong: Array<number> = [];
+
   /** 九宗門 */
   method = '';
 
@@ -152,6 +155,11 @@ class Chuan {
     this.gan = this.zhi.map((i) => Star.XunDun(k.rGan, k.rZhi, i));
     this.jiang = this.zhi.map((i) => p.jiang[p.zhi.indexOf(i)]);
     this.qin = this.zhi.map((i) => Gan(k.rGan).shengKe(Zhi(i).WuXing));
+    for (let i = 0; i < 3; i++) {
+      if (p.xunkong.includes(p.zhi.indexOf(this.zhi[i]))) this.kong.push(-1);
+      else if (this.gan[i] == -1) this.kong.push(-2);
+      else this.kong.push(0);
+    }
   }
 
   getChuan(p: Pan, k: Ke) {

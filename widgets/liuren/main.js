@@ -30,10 +30,10 @@ function update() {
 
   const c3 = document.getElementById('c3').children;
   const cz = r.chuan.zhi.map((i) => keys.dZ[i]);
-  const cg = r.chuan.gan.map((i) => (i < 0 ? '𐩒' : keys.tG[i]));
+  const cg = r.chuan.gan.map((i) => (i < 0 ? '　' : keys.tG[i]));
   const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
-  const ck = '⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙';
+  const ck = r.chuan.kong.map((i) => (i == -1 ? '⊙' : i == -2 ? '⌾' : '　'));
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
       `<span class="g">${cq[i]}</span>` +
@@ -42,8 +42,8 @@ function update() {
       `<span class="z">${cz[i]}</span>` +
       '</span>' +
       '<span>' +
-      `<span class="q">${ck[i]}</span>` +
       `<span class="j">${cj[i]}</span>` +
+      `<span class="q">${ck[i]}</span>` +
       '</span>';
   }
 
@@ -67,7 +67,11 @@ function update() {
       `<span class="z">${pz[i]}</span>` +
       `<span class="g">${pg[i]}</span>` +
       `<span class="j">${pj[i]}</span>`;
-    if (r.pan.xunkong.includes(i)) td[i].classList.add('kong');
+    if (r.pan.xunkong.includes(i)) {
+      td[i].classList.add('kong');
+    } else {
+      td[i].classList.remove('kong');
+    }
   }
   document.getElementById('note-box').value += `${r.chuan.method}課`;
 }
