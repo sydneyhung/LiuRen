@@ -21,7 +21,7 @@ function update() {
     `${keys.tG[r.pillars.mGan]}${keys.dZ[r.pillars.mZhi]}月`,
     `${keys.tG[r.pillars.yGan]}${keys.dZ[r.pillars.yZhi]}年`,
   ];
-  for (let i = 0; i < pillars.length; i++) {
+  for (var i = 0; i < pillars.length; i++) {
     pillars[i].innerHTML =
       `<span class="n">${pillars_data[i][0]}</span>` +
       `<span class="n">${pillars_data[i][1]}</span>` +
@@ -33,7 +33,7 @@ function update() {
   const cg = r.chuan.gan.map((i) => (i < 0 ? '𐩒' : keys.tG[i]));
   const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
-  for (let i = 0; i < 3; i++) {
+  for (var i = 0; i < 3; i++) {
     c3[i].innerHTML =
       `<span class="g">${cq[i]}</span>` +
       '<span>' +
@@ -47,7 +47,7 @@ function update() {
   const kh = r.ke.heaven.map((i) => keys.dZ[i]);
   const ke = r.ke.earth.map((i) => keys.dZ[i]);
   const kj = r.ke.jiang.map((i) => keys.tJ[i]);
-  for (let i = 3; i >= 0; i--) {
+  for (var i = 3; i >= 0; i--) {
     k4[3 - i].innerHTML =
       `<span class="j">${kj[i]}</span>` +
       `<span class="n">${kh[i]}</span>` +
@@ -58,7 +58,7 @@ function update() {
   const pz = r.pan.zhi.map((i) => keys.dZ[i]);
   const pg = r.pan.gan.map((i) => (i < 0 ? '　' : keys.tG[i]));
   const pj = r.pan.jiang.map((i) => keys.tJ2[i]);
-  for (let i = 0; i < 12; i++) {
+  for (var i = 0; i < 12; i++) {
     td[i].innerHTML =
       `<span class="z">${pz[i]}</span>` +
       `<span class="g">${pg[i]}</span>` +
@@ -76,24 +76,24 @@ function init() {
   const h = time.getHours() + (time.getHours() % 2);
   d_input.value = time.getFullYear() + '-' + mm + '-' + dd;
   t_input.value = 'T' + ('0' + h).slice(-2);
-  d_input.addEventListener('change', () => update());
-  t_input.addEventListener('change', () => update());
+  d_input.addEventListener('change', (event) => update());
+  t_input.addEventListener('change', (event) => update());
 
   // initialize dom
   const pillars = document.getElementById('pillars');
-  for (let i = 0; i < 4; i++) {
+  for (var i = 0; i < 4; i++) {
     pillars.innerHTML += '<div class="pillar"></div>';
   }
   const c3 = document.getElementById('c3');
-  for (let i = 0; i < 3; i++) {
+  for (var i = 0; i < 3; i++) {
     c3.innerHTML += '<div class="chuan"></div>';
   }
   const k4 = document.getElementById('k4');
-  for (let i = 0; i < 4; i++) {
+  for (var i = 0; i < 4; i++) {
     k4.innerHTML += '<div class="ke"></div>';
   }
   const td = document.getElementById('td');
-  for (let i = 0; i < 12; i++) {
+  for (var i = 0; i < 12; i++) {
     td.innerHTML += `<div id="cell-${i}" class="cell"></div>`;
   }
   td.innerHTML +=
