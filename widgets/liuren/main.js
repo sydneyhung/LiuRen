@@ -35,9 +35,9 @@ function update() {
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
   for (var i = 0; i < 3; i++) {
     c3[i].innerHTML =
-      `<span class="g">${cg[i]}</span>` +
+      `<span class="g">${cq[i]}</span>` +
       '<span>' +
-      `<span class="q">${cq[i]}</span>` +
+      `<span class="q">${cg[i]}</span>` +
       `<span class="z">${cz[i]}</span>` +
       '</span>' +
       `<span class="j">${cj[i]}</span>`;
