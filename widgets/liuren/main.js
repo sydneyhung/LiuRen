@@ -33,7 +33,7 @@ function update() {
   const cg = r.chuan.gan.map((i) => (i < 0 ? '𐩒' : keys.tG[i]));
   const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
-  const ck = '𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒𐩒';
+  const ck = '⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙⊙';
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
       `<span class="g">${cq[i]}</span>` +
@@ -41,8 +41,10 @@ function update() {
       `<span class="q">${cg[i]}</span>` +
       `<span class="z">${cz[i]}</span>` +
       '</span>' +
+      '<span>' +
       `<span class="q">${ck[i]}</span>` +
-      `<span class="j">${cj[i]}</span>`;
+      `<span class="j">${cj[i]}</span>` +
+      '</span>';
   }
 
   const k4 = document.getElementById('k4').children;
