@@ -76,8 +76,8 @@ function init() {
   const h = time.getHours() + (time.getHours() % 2);
   d_input.value = time.getFullYear() + '-' + mm + '-' + dd;
   t_input.value = 'T' + ('0' + h).slice(-2);
-  d_input.addEventListener('change', (event) => update());
-  t_input.addEventListener('change', (event) => update());
+  d_input.addEventListener('change', () => update());
+  t_input.addEventListener('change', () => update());
 
   // initialize dom
   const pillars = document.getElementById('pillars');
