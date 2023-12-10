@@ -57,6 +57,9 @@ class Pan {
   /** TianJiang Array 0~11 */
   jiang: Array<number>;
 
+  /** XunKong Array[2] */
+  xunkong: Array<number>;
+
   /** Tian-Di index difference */
   diff = 0;
 
@@ -66,6 +69,7 @@ class Pan {
     this.zhi = this.getZhiShen(yueJiang, zhan);
     this.gan = this.zhi.map((i) => Star.XunDun(rGan, rZhi, i));
     this.jiang = this.getTianJiang(rGan, zhan);
+    this.xunkong = Star.XunKong(rGan, rZhi);
   }
 
   /**

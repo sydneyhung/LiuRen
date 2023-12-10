@@ -63,8 +63,9 @@ function update() {
       `<span class="z">${pz[i]}</span>` +
       `<span class="g">${pg[i]}</span>` +
       `<span class="j">${pj[i]}</span>`;
+    if (r.pan.xunkong.includes(i)) td[i].classList.add('kong');
   }
-  document.getElementById('note-box').value += `${r.chuan.method}`;
+  document.getElementById('note-box').value += `${r.chuan.method}課`;
 }
 
 function init() {
