@@ -326,14 +326,17 @@ const Star = {
   },
 
   /** 天乙貴人: (rGan, sZhi) => zhi-idx  */
-  GuiRen: (rGan: number, sZhi: number) => {
+  GuiRen: (rGan: number, sZhi: number, rule = true) => {
     const isDay = sZhi >= 3 && sZhi < 9;
-    return isDay // 甲戊庚牛羊
-      ? [1, 0, 11, 11, 1, 0, 1, 6, 5, 5][rGan]
-      : [7, 8, 9, 9, 7, 8, 7, 2, 3, 3][rGan];
-    // return isDay // 甲羊戊庚牛
-    //   ? [7, 8, 9, 11, 1, 0, 1, 2, 3, 5][rGan]
-    //   : [1, 0, 11, 9, 7, 8, 7, 6, 5, 3][rGan];
+    if (rule) {
+      return isDay // 甲戊庚牛羊
+        ? [1, 0, 11, 11, 1, 0, 1, 6, 5, 5][rGan]
+        : [7, 8, 9, 9, 7, 8, 7, 2, 3, 3][rGan];
+    } else {
+      return isDay // 甲羊戊庚牛
+        ? [7, 8, 9, 11, 1, 0, 1, 2, 3, 5][rGan]
+        : [1, 0, 11, 9, 7, 8, 7, 6, 5, 3][rGan];
+    }
   },
 
   /** 驛馬: rZhi => zhi-idx */
