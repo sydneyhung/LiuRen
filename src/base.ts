@@ -83,7 +83,7 @@ export const Util = {
 
   /** 年柱月柱 */
   getYM(time: Date) {
-    let i = time.getFullYear() - 4;
+    let i = time.getFullYear() - 3;
     let j = JieQi.getJie(time);
     const isPrevYear = j < 2;
     j = j + (i % 5) * 12;
