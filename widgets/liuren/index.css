@@ -2,14 +2,19 @@
   font-family: 'myFont';
   src: url('../assets/kaiu.ttf');
 }
+.dt {
+  font-family: 'myFont';
+  font-size: 96%;
+}
 .n {
   font-family: 'myFont';
   font-size: 96%;
+  color: gray;
 }
 .s {
   font-family: 'myFont';
   font-size: 60%;
-  margin: auto;
+  color: gray;
 }
 .z {
   color: rgb(240, 150, 60);

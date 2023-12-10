@@ -23,9 +23,9 @@ function update() {
   ];
   for (let i = 0; i < pillars.length; i++) {
     pillars[i].innerHTML =
-      `<span class="n">${pillars_data[i][0]}</span>` +
-      `<span class="n">${pillars_data[i][1]}</span>` +
-      `<span class="n">${pillars_data[i][2]}</span>`;
+      `<span class="dt">${pillars_data[i][0]}</span>` +
+      `<span class="dt">${pillars_data[i][1]}</span>` +
+      `<span class="dt">${pillars_data[i][2]}</span>`;
   }
 
   const c3 = document.getElementById('c3').children;
