@@ -110,8 +110,9 @@
   grid-template-columns: repeat(2, 1fr);
   border-radius: 9px;
 }
-.cell .kong {
-  background-color: rgb(235, 235, 235);
+.kong {
+  opacity: 0.81;
+  /* filter: brightness(81%); */
 }
 #cell-0 {
   grid-column: 3 / 4;
