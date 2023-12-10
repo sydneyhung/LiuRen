@@ -64,7 +64,7 @@ function update() {
       `<span class="g">${pg[i]}</span>` +
       `<span class="j">${pj[i]}</span>`;
   }
-  document.getElementById('note-box').value += `${r.chun.method}`;
+  document.getElementById('note-box').value += `${r.chuan.method}`;
 }
 
 function init() {
