@@ -64,6 +64,7 @@ function update() {
       `<span class="g">${pg[i]}</span>` +
       `<span class="j">${pj[i]}</span>`;
   }
+  document.getElementById('data').innerHTML = `${r.chun.method}`;
 }
 
 function init() {
