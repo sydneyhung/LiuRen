@@ -83,12 +83,10 @@ export const Util = {
 
   /** 年柱月柱 */
   getYM(time: Date) {
-    let i = time.getFullYear() - 4;
-    let j = JieQi.getJie(time);
-    const isPrev = j == 1;
-    j += ((i + (j == 0 ? 1 : 0)) % 5) * 12;
-    i = isPrev ? i - 1 : i;
-    return [i % 10, i % 12, j % 10, j % 12];
+    let y = (time.getFullYear() - 4) % 60;
+    let j = JieQi.getJie(time) + (y % 5) * 12;
+    if (JieQi.getJie(time) < 2) y--;
+    return [y % 10, y % 12, j % 10, j % 12];
   },
 
   /** 日柱時柱 */
@@ -240,7 +238,7 @@ export const JieQi = {
     for (let i = 0; i < 24; i += 2) {
       if (time < this.getDate(year, i).getTime()) return i / 2;
     }
-    return 0;
+    return 12;
   },
 
   /**
