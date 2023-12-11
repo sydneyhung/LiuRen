@@ -85,9 +85,9 @@ export const Util = {
   getYM(time: Date) {
     let i = time.getFullYear() - 3;
     let j = JieQi.getJie(time);
-    const isPrevYear = j < 2;
     j = j + (i % 5) * 12;
-    i = isPrevYear ? i - 1 : i;
+    i = j % 12 < 2 ? i - 2 : i - 1;
+    console.log(i, j);
     return [i % 10, i % 12, j % 10, j % 12];
   },
 
