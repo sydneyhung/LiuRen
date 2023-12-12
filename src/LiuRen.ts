@@ -157,9 +157,9 @@ class Chuan {
     this.qin = this.zhi.map((i) => Gan(k.rGan).shengKe(Zhi(i).WuXing));
     this.kong = this.zhi.map((i) =>
       Star.XunDun(k.rGan, k.rZhi, i) < 0
-        ? -2
+        ? -2 // 空亡
         : p.xunkong.includes(p.zhi.indexOf(i))
-        ? -1
+        ? -1 // 落空
         : 0
     );
   }
