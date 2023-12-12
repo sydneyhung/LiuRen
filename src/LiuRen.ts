@@ -156,10 +156,10 @@ class Chuan {
     this.jiang = this.zhi.map((i) => p.jiang[p.zhi.indexOf(i)]);
     this.qin = this.zhi.map((i) => Gan(k.rGan).shengKe(Zhi(i).WuXing));
     this.kong = this.zhi.map((i) =>
-      Star.XunDun(k.rGan, k.rZhi, i) < 0
-        ? -2 // 空亡
-        : p.xunkong.includes(p.zhi.indexOf(i))
+      p.xunkong.includes(p.zhi.indexOf(i))
         ? -1 // 落空
+        : Star.XunDun(k.rGan, k.rZhi, i) < 0
+        ? -2 // 空亡
         : 0
     );
   }
