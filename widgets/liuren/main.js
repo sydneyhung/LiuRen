@@ -43,7 +43,7 @@ function update() {
       `<span class="s g">${cg[i]}</span>` +
       '</span>' +
       '<span>&nbsp' +
-      `<span class="j">${cj[i]}</span>&nbsp` +
+      `<span class="j">${cj[i]}</span>` +
       `<span class="s q">${ck[i]}</span>` +
       '</span>';
   }
