@@ -30,18 +30,22 @@ function update() {
 
   const c3 = document.getElementById('c3').children;
   const cz = r.chuan.zhi.map((i) => keys.dZ[i]);
-  const cg = r.chuan.gan.map((i) => (i < 0 ? '⨂' : keys.tG[i]));
+  const cg = r.chuan.gan.map((i) => (i < 0 ? '　' : keys.tG[i]));
   const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
-  const ck = r.chuan.kong.map((i) => (i == -1 ? '⨀' : '　'));
+  const ck = r.chuan.gan.map((i) => (i < 0 ? '⭘' : '　'));
+  const cl = r.chuan.kong.map((i) => (i < 0 ? '⭗' : '　'));
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
       '<span>' +
-      `<span class="s">${cq[i]}</span>` +
-      `<span class="z">${cz[i]}</span>` +
+      `<span class="s">${cq[i]}</span>&nbsp` +
+      `<span class="z">${cz[i]}</span>&nbsp` +
       `<span class="s">${cg[i]}</span>` +
-      `<span class="j">${cj[i]}</span>` +
-      `<span class="s">${ck[i]}</span>` +
+      '</span>' +
+      '<span>' +
+      `<span class="s">${ck[i]}</span>&nbsp` +
+      `<span class="j">${cj[i]}</span>&nbsp` +
+      `<span class="s">${cl[i]}</span>` +
       '</span>';
   }
 

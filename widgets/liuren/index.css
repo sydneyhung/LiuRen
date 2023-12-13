@@ -9,12 +9,7 @@
 .n {
   font-family: 'myFont';
   font-size: 96%;
-  color: gray;
-}
-.s {
-  font-family: 'myFont';
-  font-size: 60%;
-  color: gray;
+  color: rgb(21, 21, 99);
 }
 .z {
   color: rgb(240, 150, 60);
@@ -23,7 +18,7 @@
   margin: auto;
 }
 .g {
-  color: rgb(81, 81, 81);
+  color: rgb(21, 21, 99);
   font-family: 'myFont';
   font-size: 84%;
   margin: auto;
@@ -34,11 +29,10 @@
   font-size: 111%;
   margin: auto;
 }
-.q {
-  color: rgb(21, 21, 99);
+.s {
   font-family: 'myFont';
-  font-size: 84%;
-  margin: auto;
+  font-size: 72%;
+  color: rgb(81, 81, 81);
 }
 .cell .z {
   margin-left: 0px;
@@ -103,7 +97,7 @@
   margin: 3px auto;
   font-size: 120%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 .ke {
