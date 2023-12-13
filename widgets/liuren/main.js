@@ -30,18 +30,16 @@ function update() {
 
   const c3 = document.getElementById('c3').children;
   const cz = r.chuan.zhi.map((i) => keys.dZ[i]);
-  const cg = r.chuan.gan.map((i) => (i < 0 ? '　' : keys.tG[i]));
+  const cg = r.chuan.gan.map((i) => (i < 0 ? '⨂' : keys.tG[i]));
   const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
-  const ck = r.chuan.kong.map((i) => (i == -1 ? '⨀' : i == -2 ? '⨂' : '　'));
+  const ck = r.chuan.kong.map((i) => (i == -1 ? '⨀' : '　'));
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
-      `<span class="q">${cq[i]}</span>` +
       '<span>' +
-      `<span class="s">${cg[i]}</span>` +
+      `<span class="s">${cq[i]}</span>` +
       `<span class="z">${cz[i]}</span>` +
-      '</span>' +
-      '<span>' +
+      `<span class="s">${cg[i]}</span>` +
       `<span class="j">${cj[i]}</span>` +
       `<span class="s">${ck[i]}</span>` +
       '</span>';

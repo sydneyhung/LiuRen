@@ -158,9 +158,9 @@ class Chuan {
     this.kong = this.zhi.map((i) =>
       p.xunkong.includes(p.zhi.indexOf(i))
         ? -1 // 落空
-        : Star.XunDun(k.rGan, k.rZhi, i) < 0
-        ? -2 // 空亡
-        : 0
+        : // : Star.XunDun(k.rGan, k.rZhi, i) < 0
+          // ? -2 // 空亡
+          0
     );
   }
 
