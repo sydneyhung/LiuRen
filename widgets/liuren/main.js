@@ -33,8 +33,7 @@ function update() {
   const cg = r.chuan.gan.map((i) => (i < 0 ? '　' : keys.tG[i]));
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
   const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
-  const ck = r.chuan.gan.map((i) => (i < 0 ? '⭘' : '　'));
-  const cl = r.chuan.kong.map((i) => (i < 0 ? '⭗' : '　'));
+  const ck = r.chuan.kong.map((i) => (i < 0 ? '⭗' : '　'));
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
       `<span class="n">&emsp;${'初中末'[i]}</span>` +
@@ -45,7 +44,7 @@ function update() {
       '</span>' +
       '<span>&nbsp' +
       `<span class="j">${cj[i]}</span>&nbsp` +
-      `<span class="s q">${cl[i]}</span>` +
+      `<span class="s q">${ck[i]}</span>` +
       '</span>';
   }
 
