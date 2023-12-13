@@ -11,6 +11,11 @@
   font-size: 96%;
   color: rgb(21, 21, 99);
 }
+.nn {
+  font-family: 'myFont';
+  font-size: 108%;
+  color: rgb(0, 0, 0);
+}
 .z {
   color: rgb(240, 150, 60);
   font-family: 'myFont';

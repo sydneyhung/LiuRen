@@ -56,8 +56,8 @@ function update() {
   for (let i = 3; i >= 0; i--) {
     k4[3 - i].innerHTML =
       `<span class="j">${kj[i]}</span>` +
-      `<span class="n">${kh[i]}</span>` +
-      `<span class="n">${i ? ke[i] : keys.tG[r.ke.rGan]}</span>`;
+      `<span class="nn">${kh[i]}</span>` +
+      `<span class="nn">${i ? ke[i] : keys.tG[r.ke.rGan]}</span>`;
   }
 
   const td = document.getElementById('td').children;
