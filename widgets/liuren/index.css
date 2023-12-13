@@ -2,19 +2,17 @@
   font-family: 'myFont';
   src: url('../assets/kaiu.ttf');
 }
-.dt {
-  font-family: 'myFont';
-  font-size: 96%;
-}
 .n {
+  color: rgb(72, 72, 72);
   font-family: 'myFont';
-  font-size: 96%;
-  color: rgb(21, 21, 99);
+  font-size: 100%;
+  margin: auto;
 }
-.nn {
+.q {
+  color: #8f8073;
   font-family: 'myFont';
-  font-size: 108%;
-  color: rgb(45, 27, 9);
+  font-size: 84%;
+  margin: auto;
 }
 .z {
   color: rgb(240, 150, 60);
@@ -23,21 +21,20 @@
   margin: auto;
 }
 .g {
-  color: rgb(21, 21, 99);
+  color: #0f69c3;
   font-family: 'myFont';
   font-size: 84%;
   margin: auto;
 }
 .j {
-  color: rgb(18, 108, 63);
+  color: rgb(33, 99, 66);
   font-family: 'myFont';
-  font-size: 111%;
+  font-size: 100%;
   margin: auto;
 }
 .s {
   font-family: 'myFont';
   font-size: 72%;
-  color: rgb(81, 81, 81);
 }
 .cell .z {
   margin-left: 0px;

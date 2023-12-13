@@ -23,30 +23,29 @@ function update() {
   ];
   for (let i = 0; i < pillars.length; i++) {
     pillars[i].innerHTML =
-      `<span class="dt">${pillars_data[i][0]}</span>` +
-      `<span class="dt">${pillars_data[i][1]}</span>` +
-      `<span class="dt">${pillars_data[i][2]}</span>`;
+      `<span class="n">${pillars_data[i][0]}</span>` +
+      `<span class="n">${pillars_data[i][1]}</span>` +
+      `<span class="n">${pillars_data[i][2]}</span>`;
   }
 
   const c3 = document.getElementById('c3').children;
   const cz = r.chuan.zhi.map((i) => keys.dZ[i]);
   const cg = r.chuan.gan.map((i) => (i < 0 ? '　' : keys.tG[i]));
-  const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const cq = r.chuan.qin.map((i) => keys.lQ[i]);
+  const cj = r.chuan.jiang.map((i) => keys.tJ[i]);
   const ck = r.chuan.gan.map((i) => (i < 0 ? '⭘' : '　'));
   const cl = r.chuan.kong.map((i) => (i < 0 ? '⭗' : '　'));
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
       `<span class="n">&emsp;${'初中末'[i]}</span>` +
       '<span>' +
-      `<span class="s">${cq[i]}</span>&nbsp` +
+      `<span class="s q">${cq[i]}</span>&nbsp` +
       `<span class="z">${cz[i]}</span>&nbsp` +
-      `<span class="s">${cg[i]}</span>` +
+      `<span class="s g">${cg[i]}</span>` +
       '</span>' +
-      '<span>' +
-      `<span class="s">${ck[i]}</span>&nbsp` +
+      '<span>&nbsp' +
       `<span class="j">${cj[i]}</span>&nbsp` +
-      `<span class="s">${cl[i]}</span>` +
+      `<span class="s q">${cl[i]}</span>` +
       '</span>';
   }
 
@@ -57,8 +56,8 @@ function update() {
   for (let i = 3; i >= 0; i--) {
     k4[3 - i].innerHTML =
       `<span class="j">${kj[i]}</span>` +
-      `<span class="nn">${kh[i]}</span>` +
-      `<span class="nn">${i ? ke[i] : keys.tG[r.ke.rGan]}</span>`;
+      `<span class="n">${kh[i]}</span>` +
+      `<span class="n">${i ? ke[i] : keys.tG[r.ke.rGan]}</span>`;
   }
 
   const td = document.getElementById('td').children;
