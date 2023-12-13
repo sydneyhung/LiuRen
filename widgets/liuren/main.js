@@ -37,6 +37,7 @@ function update() {
   const cl = r.chuan.kong.map((i) => (i < 0 ? '⭗' : '　'));
   for (let i = 0; i < 3; i++) {
     c3[i].innerHTML =
+      `<span class="n">&emsp;${'初中末'[i]}</span>` +
       '<span>' +
       `<span class="s">${cq[i]}</span>&nbsp` +
       `<span class="z">${cz[i]}</span>&nbsp` +
